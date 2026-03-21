@@ -1,8 +1,5 @@
 # Secure and Unbiased Quantum Energy Teleportation via Quantum Oblivious Transfer
 
-> **Senior Design Project** · Department of Electrical and Computer Engineering  
-> North South University · Summer 2025
-
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
 [![Qiskit](https://img.shields.io/badge/Qiskit-1.4.2-6929C4?logo=IBM)](https://qiskit.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -11,11 +8,11 @@
 
 ## Authors
 
-| Name | Student ID |
-|---|---|
-| Sara Rahman | 2122081042 |
-| Tahmina Sultana | 2121344042 |
-| M Shamimul Haque Mondal Shimul | 2122085642 |
+| Name |
+|---|
+| Shamimul Shimul |
+| Sara Rahman |
+| Tahmina Sultana |
 
 **Supervisor:** Dr. Mahdy Rahman Chowdhury, Associate Professor, ECE Department, NSU
 
@@ -51,30 +48,30 @@ The protocol involves three parties: **Alice** (energy sender), **Bob** (receive
 ├────────────┬────────────────────────────────────────────────────────┤
 │  Phase 1   │  BB84 Key Generation                                   │
 │            │  Alice ↔ Bob and Alice ↔ Charlie independently.        │
-│            │  Bases are compared; matching positions form the        │
-│            │  oblivious key.                                         │
+│            │  Bases are compared; matching positions form the       │
+│            │  oblivious key.                                        │
 ├────────────┼────────────────────────────────────────────────────────┤
-│  Phase 2   │  Entanglement Preparation                               │
+│  Phase 2   │  Entanglement Preparation                              │
 │            │  Alice prepares ground state |g⟩ via Ry + CNOT gates   │
-│            │  and creates Bell pairs |Φ+⟩ shared with each receiver. │
+│            │  and creates Bell pairs |Φ+⟩ shared with each receiver.│
 ├────────────┼────────────────────────────────────────────────────────┤
-│  Phase 3   │  Alice's Projective Measurement                         │
-│            │  Alice measures in the X-basis, injecting energy        │
+│  Phase 3   │  Alice's Projective Measurement                        │
+│            │  Alice measures in the X-basis, injecting energy       │
 │            │  locally. Results μ_B, μ_C ∈ {+1, -1}.                 │
 ├────────────┼────────────────────────────────────────────────────────┤
 │  Phase 4   │  Message Encryption (HMAC-SHA256 XOR pad)              │
-│            │  Alice encodes μ into two messages M0 (correct) and     │
-│            │  M1 (incorrect), encrypted with the two halves of       │
-│            │  the oblivious key.                                      │
+│            │  Alice encodes μ into two messages M0 (correct) and    │
+│            │  M1 (incorrect), encrypted with the two halves of      │
+│            │  the oblivious key.                                    │
 ├────────────┼────────────────────────────────────────────────────────┤
-│  Phase 5   │  Oblivious Transfer (BBCS protocol)                     │
-│            │  Each receiver chooses one message. They can decrypt     │
-│            │  only the message whose key half they possess. Alice     │
-│            │  never learns the choice.                                │
+│  Phase 5   │  Oblivious Transfer (BBCS protocol)                    │
+│            │  Each receiver chooses one message. They can decrypt   │
+│            │  only the message whose key half they possess. Alice   │
+│            │  never learns the choice.                              │
 ├────────────┼────────────────────────────────────────────────────────┤
-│  Phase 6   │  Conditional Energy Extraction                          │
-│            │  Receivers apply Ry(2μφ) rotations. Correct μ enables   │
-│            │  energy extraction; incorrect μ yields nothing.          │
+│  Phase 6   │  Conditional Energy Extraction                         │
+│            │  Receivers apply Ry(2μφ) rotations. Correct μ enables  │
+│            │  energy extraction; incorrect μ yields nothing.        │
 └────────────┴────────────────────────────────────────────────────────┘
 ```
 
@@ -232,4 +229,4 @@ print(f"Charlie total energy: {results['charlie_energy_total']:.4f}")
 ## License
 
 This project is released under the [MIT License](LICENSE).  
-© 2025 Sara Rahman, Tahmina Sultana, M Shamimul Haque Mondal Shimul — North South University
+© 2025 Shamimul Shimul, Sara Rahman, Tahmina Sultana — North South University
